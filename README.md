@@ -12,3 +12,9 @@ In this particular example, the array option is already included inside the bash
 ```
 sbatch launch_sbatch.sh
 ```
+
+## Useful terminal commands
+Delete every output file (careful):
+```
+rm *.out
+```
