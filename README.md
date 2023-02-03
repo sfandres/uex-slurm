@@ -1,5 +1,5 @@
 # slurm
-This repository contains all the codes I have been using in slurm.
+This repository contains all the codes I have been using in slurm. The files with extension `.out` are not tracked.
 
 ## Usage
 Run the following command in the terminal:
