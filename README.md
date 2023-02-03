@@ -14,7 +14,7 @@ sbatch launch_sbatch.sh
 ```
 
 ## Basic Slurm commands
-Show information about your job(s) in the queue. The command when run without the `-u` flag, shows a list of your job(s) and all other jobs in the queue.
+Show information about your job(s) in the queue. When run without the `-u, --user=<user_list>` option, shows a list of your job(s) and all other jobs in the queue.
 ```
 squeue -u <user_id>
 ```
