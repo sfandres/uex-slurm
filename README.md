@@ -1,4 +1,4 @@
-# slurm
+# uex-slurm
 This repository contains all the codes I have been using in slurm. The files with extension `.out` are not tracked. The use case is the fibonacci calculation given a maximum value.
 
 ## Job arrays
