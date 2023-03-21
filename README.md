@@ -17,6 +17,7 @@ This repository contains all the codes I have been using in slurm. The files wit
   * [Installation](#installation)
   * [Usage](#usage)
 * [Code examples](#code-examples)
+* [Useful terminal commands](#useful-terminal-commands)
 * [License](#license)
 
 ## Getting started
@@ -26,12 +27,16 @@ This repository contains all the codes I have been using in slurm. The files wit
 * You need access to a supercomputer that uses the [Slurm workload manager][slurm].
 
 ### Installation
-The environment.yml file contains all the necessary packages to use this project inside the environment with name `ice-conda` provided. You can create a conda environment from the .yml file as follows:
+The environment.yml file contains all the necessary packages to use this project inside the environment with name `slurm-conda` provided. You can create a conda environment from the .yml file as follows:
 ```
 conda env create -f environment.yml
 ```
 
 ### Usage
+
+
+
+
 
 ## Job arrays
 SLURM array jobs make it easy to run many similar tasks. You just have to run the following command in the terminal:
@@ -51,13 +56,12 @@ Run the following command:
 sbatch launch_job_single.sh
 ```
 
-## Basic Slurm commands
+## Useful terminal commands
 Show information about your job(s) in the queue. When run without the `-u, --user=<user_list>` option, shows a list of your job(s) and all other jobs in the queue.
 ```
 squeue -u <user_id>
 ```
 
-## Useful terminal commands
 Delete every output file (careful):
 ```
 rm *.out
