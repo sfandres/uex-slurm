@@ -1,4 +1,4 @@
-name: /home/sfandres/Documents/Git/uex-slurm/slurm-conda
+name: slurm-conda
 channels:
   - defaults
 dependencies:
