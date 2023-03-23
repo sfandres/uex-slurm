@@ -31,12 +31,12 @@ No necessary.
 
 ### Usage
 
+Run the following command:
+```
+srun srun_simple.sh
+```
 
-
-
-
-## Job arrays
-SLURM array jobs make it easy to run many similar tasks. You just have to run the following command in the terminal:
+Slurm array jobs make it easy to run many similar tasks. You just have to run the following command in the terminal:
 ```
 sbatch --array=0-2:1 launch_job_arrays.sh
 ```
@@ -47,11 +47,9 @@ In this particular example, the array option is already included inside the bash
 sbatch launch_job_arrays.sh
 ```
 
-## Job single
-Run the following command:
-```
-sbatch launch_job_single.sh
-```
+## Code examples
+The examples are organized in folders:
+
 
 ## Useful terminal commands
 Show information about your job(s) in the queue. When run without the `-u, --user=<user_list>` option, shows a list of your job(s) and all other jobs in the queue.
@@ -63,9 +61,6 @@ Delete every output file (careful):
 ```
 rm *.out
 ```
-
-## Code examples
-The examples are organized in folders:
 
 ## License
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
