@@ -23,14 +23,11 @@ This repository contains all the codes I have been using in slurm. The files wit
 ## Getting started
 
 ### Prerequisites
-* Anaconda distribution is recommended. You can install it following the [official installation guide][anaconda].
+* Anaconda distribution is recommended to work with Python scripts. You can install it following the [official installation guide][anaconda].
 * You need access to a supercomputer that uses the [Slurm workload manager][slurm].
 
 ### Installation
-The environment.yml file contains all the necessary packages to use this project inside the environment with name `slurm-conda` provided. You can create a conda environment from the .yml file as follows:
-```
-conda env create -f environment.yml
-```
+No necessary.
 
 ### Usage
 
