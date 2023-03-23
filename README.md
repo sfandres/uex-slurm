@@ -27,14 +27,33 @@ This repository contains all the codes I have been using in slurm. The files wit
 * You need access to a supercomputer that uses the [Slurm workload manager][slurm].
 
 ### Installation
-No necessary.
+Not necessary.
 
 ### Usage
 
-Run the following command:
+#### CD22_23-P06_single_job
+
+To run this example, execute any of the following commands (saved inside the `srun_simple.sh` file) on a cluster with Slurm.
+
 ```
-srun srun_simple.sh
+srun -p cpu12c -N 1 -n 1 -J max_fibonacci -t 00:10:00 -o max_fibonacci.out python3 max_fibonacci.py
+srun --partition=cpu12c --nodes=1 --ntasks=1 --job-name=max_fibonacci --time=00:10:00 --output=max_fibonacci.out python3 max_fibonacci.py
 ```
+
+```
+usage: max_fibonacci.py [-h] [--maximum MAXIMUM]
+
+Python script to play with slurm.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --maximum MAXIMUM, -m MAXIMUM
+                        input number to compute Fibonacci (>0).
+```
+
+#### CD22_23-P07_job_arrays
+
+[**---work in progress---**]
 
 Slurm array jobs make it easy to run many similar tasks. You just have to run the following command in the terminal:
 ```
@@ -47,16 +66,20 @@ In this particular example, the array option is already included inside the bash
 sbatch launch_job_arrays.sh
 ```
 
+[**---work in progress---**]
+
 ## Code examples
 The examples are organized in folders:
-* `CD22_23-P06_single_job` contains...
-* `CD22_23-P07_job_arrays` contains...
+* [CD22_23-P06_single_job](CD22_23-P06_single_job) contains a simple example of how to submit a single job to Slurm using `srun` with a Python script. 
+* [CD22_23-P07_job_arrays](CD22_23-P07_job_arrays) contains a more complex example where `sbatch` is used to submit a single job first, followed by job arrays. The scripts are written in C++ for timing purposes.
 
 ## Useful terminal commands
 Show information about your job(s) in the queue. When run without the `-u, --user=<user_list>` option, shows a list of your job(s) and all other jobs in the queue.
 ```
 squeue -u <user_id>
 ```
+
+[**---work in progress---**]
 
 Delete every output file (careful):
 ```
