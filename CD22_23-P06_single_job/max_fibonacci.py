@@ -15,6 +15,7 @@ def get_args(argv=None):
         '--maximum',
         '-m',
         type=int,
+	default=1000,
         help=('input number to compute Fibonacci (>0).')
     )
 
@@ -28,10 +29,10 @@ def main():
 
     # Get input number.
     maximum = args.maximum
-    if maximum == None:
-        maximum = int(input('Enter a number to compute Fibonacci (>0): '))
-    else:
-        print(f'Number to compute Fibonacci: {maximum}')
+    # if maximum == None:
+    #     maximum = int(input('Enter a number to compute Fibonacci (>0): '))
+    # else:
+    #     print(f'Number to compute Fibonacci: {maximum}')
 
     # Handle exceptions.
     if maximum <= 0:
