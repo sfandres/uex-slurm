@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-Wall -fopenmp
+CFLAGS=-Wall -fopenmp -std=c++11
 
 all: reduction
 
