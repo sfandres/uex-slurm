@@ -29,10 +29,6 @@ def main():
 
     # Get input number.
     maximum = args.maximum
-    # if maximum == None:
-    #     maximum = int(input('Enter a number to compute Fibonacci (>0): '))
-    # else:
-    #     print(f'Number to compute Fibonacci: {maximum}')
 
     # Handle exceptions.
     if maximum <= 0:
