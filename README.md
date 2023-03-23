@@ -49,7 +49,8 @@ sbatch launch_job_arrays.sh
 
 ## Code examples
 The examples are organized in folders:
-
+* `CD22_23-P06_single_job` contains...
+* `CD22_23-P07_job_arrays` contains...
 
 ## Useful terminal commands
 Show information about your job(s) in the queue. When run without the `-u, --user=<user_list>` option, shows a list of your job(s) and all other jobs in the queue.
