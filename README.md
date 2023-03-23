@@ -33,7 +33,7 @@ Not necessary.
 
 #### CD22_23-P06_single_job
 
-To run this example, execute any of the following commands (saved inside the `srun_simple.sh` file) on a cluster with Slurm.
+To run this example, execute any of the following commands (saved inside the [srun_simple.sh](srun_simple.sh) file) on a cluster with Slurm.
 
 ```
 srun -p cpu12c -N 1 -n 1 -J max_fibonacci -t 00:10:00 -o max_fibonacci.out python3 max_fibonacci.py
