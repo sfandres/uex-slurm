@@ -27,8 +27,8 @@ both_ids="job_id=${job_id} task_id=${task_id}"
 ## Send email when job begin.
 echo " " | /usr/bin/mail -s "Sbatch ${both_ids} began" sfandres@unex.es
 
-## Load the Python module (not necessary).
-## module load cuda/11.0.1
+## Load the Python module (newest version available).
+module load python/3.9.10
 
 ## Load environments (not necessary here).
 ## Option 1: Load Python venv environment.
