@@ -20,7 +20,7 @@
 job_id=${SLURM_JOB_ID}
 
 ## Send email when job begin.
-echo " " | /usr/bin/mail -s "Sbatch job=${job_id} began" sfandres@unex.es
+echo " " | /usr/bin/mail -s "Sbatch job_id=${job_id} began" sfandres@unex.es
 
 ## Load the Python module (newest version available).
 module load python/3.9.10
@@ -36,4 +36,4 @@ module load python/3.9.10
 srun python3 ../max_fibonacci.py -m 1000000
 
 ## Send email when job ends.
-cat slurm_${job_id}.out | /usr/bin/mail -s "Sbatch job=${job_id} ended" sfandres@unex.es
+cat slurm_${job_id}.out | /usr/bin/mail -s "Sbatch job_id=${job_id} ended" sfandres@unex.es
