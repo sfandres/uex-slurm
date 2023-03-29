@@ -33,7 +33,7 @@ module load python/3.9.10
 ## conda activate env_name
 
 ## Execute the Python script and pass the arguments.
-srun python3 max_fibonacci.py -m 10000
+srun python3 ../max_fibonacci.py -m 1000000
 
 ## Send email when job ends.
 cat slurm_${job_id}.out | /usr/bin/mail -s "Sbatch job=${job_id} ended" sfandres@unex.es
