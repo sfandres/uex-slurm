@@ -31,13 +31,13 @@ Not necessary.
 
 ### Usage
 
-#### CD22_23-P06_single_job
+#### [CD22_23-P06_single_job](CD22_23-P06_single_job)
 
-To execute this example, you can run any of the following commands (which are saved inside the [srun_simple.sh](CD22_23-P06_single_job/srun_simple.sh) file) on a Slurm-managed cluster.
+To execute this example, you can run any of the following commands (which are saved inside the [launch_job_srun.sh](CD22_23-P06_single_job/launch_job_srun.sh) file) on a Slurm-managed cluster.
 
 ```
-srun -p cpu12c -N 1 -n 1 -J max_fibonacci -t 00:10:00 -o max_fibonacci.out python3 max_fibonacci.py
-srun --partition=cpu12c --nodes=1 --ntasks=1 --job-name=max_fibonacci --time=00:10:00 --output=max_fibonacci.out python3 max_fibonacci.py
+srun -p cpu12c -N 1 -n 1 -J max_fibonacci -t 00:10:00  python3 ../max_fibonacci.py
+srun --partition=cpu12c --nodes=1 --ntasks=1 --job-name=max_fibonacci --time=00:10:00 python3 ../max_fibonacci.py
 ```
 
 ```
@@ -51,7 +51,7 @@ optional arguments:
                         input number to compute Fibonacci (>0).
 ```
 
-#### CD22_23-P07_job_arrays
+#### [CD22_23-P07_job_arrays](CD22_23-P07_job_arrays)
 
 [**---work in progress---**]
 
