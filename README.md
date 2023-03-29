@@ -36,10 +36,9 @@ Not necessary.
 To execute this example, you can run any of the following commands (which are saved inside the [srun_simple.sh](CD22_23-P06_single_job/srun_simple.sh) file) on a Slurm-managed cluster.
 
 ```
-srun -p cpu12c -N 1 -n 1 -J max_fibonacci -t 00:10:00 -o max_fibonacci.out python3 max_fibonacci.py -m <number>
-srun --partition=cpu12c --nodes=1 --ntasks=1 --job-name=max_fibonacci --time=00:10:00 --output=max_fibonacci.out python3 max_fibonacci.py -m <number>
+srun -p cpu12c -N 1 -n 1 -J max_fibonacci -t 00:10:00 -o max_fibonacci.out python3 max_fibonacci.py
+srun --partition=cpu12c --nodes=1 --ntasks=1 --job-name=max_fibonacci --time=00:10:00 --output=max_fibonacci.out python3 max_fibonacci.py
 ```
-where `<number>` is the maximum number up to which the last number in the sequence will be calculated.
 
 ```
 usage: max_fibonacci.py [-h] [--maximum MAXIMUM]
