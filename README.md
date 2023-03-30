@@ -31,9 +31,9 @@ Not necessary.
 
 ### Usage
 
-#### [CD22_23-P06_single_job](CD22_23-P06_single_job)
+#### [CD22_23-P06_srun](CD22_23-P06_srun)
 
-To execute this example, you can run any of the following commands (which are saved inside the [launch_job_srun.sh](CD22_23-P06_single_job/launch_job_srun.sh) file) on a Slurm-managed cluster.
+To execute this example, you can run any of the following commands (which are saved inside the [launch_srun_job.sh](CD22_23-P06_srun/launch_srun_job.sh) file) on a Slurm-managed cluster.
 
 ```
 srun -p cpu12c -N 1 -n 1 -J max_fibonacci -t 00:10:00  python3 ../max_fibonacci.py
@@ -51,7 +51,7 @@ optional arguments:
                         input number to compute Fibonacci (>0).
 ```
 
-#### [CD22_23-P07_job_arrays](CD22_23-P07_job_arrays)
+#### [CD22_23-P07_sbatch](CD22_23-P07_sbatch)
 
 [**---work in progress---**]
 
@@ -66,12 +66,15 @@ In this particular example, the array option is already included inside the bash
 sbatch launch_job_arrays.sh
 ```
 
+#### [CD22_23-P08](CD22_23-P08)
+
 [**---work in progress---**]
 
 ## Code examples
 The examples are organized in folders:
-* [CD22_23-P06_single_job](CD22_23-P06_single_job) contains a simple example of how to submit a single job to Slurm using `srun` with a Python script. 
-* [CD22_23-P07_job_arrays](CD22_23-P07_job_arrays) contains a more complex example where `sbatch` is used to submit a single job first, followed by job arrays. The scripts are written in C++ for timing purposes.
+* [CD22_23-P06_srun](CD22_23-P06_srun) contains a simple example of how to submit a single job to Slurm using `srun` with a Python script. 
+* [CD22_23-P07_sbatch](CD22_23-P07_sbatch) contains a more complex example where `sbatch` is used to submit a single job first, followed by job arrays, where the script is also written in Python.
+* [CD22_23-P08](CD22_23-P08) contains... and the scripts are written in C++ for timing purposes.
 
 ## Useful terminal commands
 Show information about your job(s) in the queue. When run without the `-u, --user=<user_list>` option, shows a list of your job(s) and all other jobs in the queue.
