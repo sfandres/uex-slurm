@@ -7,10 +7,10 @@
 #SBATCH --partition=cpu12c                          ## Request specific partition.
 #SBATCH --wait-all-nodes=1                          ## Controls when the execution begins.
 #SBATCH --time=00:10:00                             ## Job duration.
-#SBATCH --ntasks=1				                    ## Total number of tasks required.
-#SBATCH --ntasks-per-node=1			                ## Number of tasks on each node.
-#SBATCH --cpus-per-task=1			                ## Number of cpus required per task.
-#SBATCH --mail-type=ALL				                ## (not working) Type of notification via email.
+#SBATCH --ntasks=1                                  ## Total number of tasks required.
+#SBATCH --ntasks-per-node=1                         ## Number of tasks on each node.
+#SBATCH --cpus-per-task=1                           ## Number of cpus required per task.
+#SBATCH --mail-type=ALL                             ## (not working) Type of notification via email.
 #SBATCH --mail-user=sfandres@unex.es                ## (not working) User to receive the email notification.
 #SBATCH --job-name=max_fibonacci_%A                 ## Name of the job.
 #SBATCH --output=slurm_%A.out                       ## Output file.
