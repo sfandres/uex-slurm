@@ -9,7 +9,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 # uex-slurm
-This repository contains all the codes I have been using in slurm. The files with extension `.out` are not tracked. The use case is the fibonacci calculation given a maximum value.
+This repository has been created for the Slurm lab session of the Distributed Computing subject at the University of Extremadura (UEx).
 
 ## Table of contents
 * [Getting started](#getting-started)
@@ -30,6 +30,8 @@ This repository contains all the codes I have been using in slurm. The files wit
 Not necessary.
 
 ### Usage
+
+The files with extension `.out` are not tracked. The use case is the fibonacci calculation given a maximum value.
 
 #### [CD22_23-P06_srun](CD22_23-P06_srun)
 
