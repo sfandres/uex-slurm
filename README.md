@@ -77,7 +77,7 @@ Run the following command to execute the example:
 ```
 sbatch launch_sbatch_job_speedups.sh <num_threads>
 ```
-where `<num_threads>` is the desired number of threads set for the parallel execution of the algorithm.
+where `<num_threads>` is the desired number of threads that will be used for the parallel execution of the algorithm.
 
 ## Code examples
 The examples are organized in folders:
