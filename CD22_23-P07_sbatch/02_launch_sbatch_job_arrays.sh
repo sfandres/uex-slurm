@@ -5,6 +5,7 @@
 ## Resource request.
 #SBATCH --nodes=1                                   ## Number of nodes.
 #SBATCH --partition=cpu12c                          ## Request specific partition.
+#SBATCH --mem=4GB                                   ## Real memory required per node.
 #SBATCH --wait-all-nodes=1                          ## Controls when the execution begins.
 #SBATCH --time=00:10:00                             ## Job duration.
 #SBATCH --ntasks=1                                  ## Total number of tasks required.
