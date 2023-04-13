@@ -55,7 +55,7 @@ optional arguments:
 
 #### [CD22_23-P07_sbatch](CD22_23-P07_sbatch)
 
-To launch a single job with sbatch, run the following command:
+To launch a single job with sbatch for the fibonacci computation, run the following command:
 ```
 sbatch 01_launch_sbatch_job.sh
 ```
@@ -71,27 +71,24 @@ In this particular example, the array option is already included inside the bash
 sbatch 02_launch_sbatch_job_arrays.sh
 ```
 
-#### [CD22_23-P08](CD22_23-P08)
+#### [CD22_23-P08_speedup](CD22_23-P08_speedup)
 
-[**---work in progress---**]
+Run the following command to execute the example:
+```
+sbatch launch_sbatch_job_speedups.sh <num_threads>
+```
+where `<num_threads>` is the desired number of threads set for the parallel execution of the algorithm.
 
 ## Code examples
 The examples are organized in folders:
 * [CD22_23-P06_srun](CD22_23-P06_srun) contains a simple example of how to submit a single job to Slurm using `srun` with a Python script. 
 * [CD22_23-P07_sbatch](CD22_23-P07_sbatch) contains a more complex example where `sbatch` is used to submit a single job first, followed by job arrays, where the script is also written in Python.
-* [CD22_23-P08](CD22_23-P08) contains... and the scripts are written in C++ for timing purposes.
+* [CD22_23-P08_speedup](CD22_23-P08_speedup) contains an example to measure speedups where the aim is to compute the mean value given a dataset of N rows and M features. The sbatch file executes the compilation process as well as the execution of the algorithm. The scripts are written in C++ for timing purposes.
 
 ## Useful terminal commands
 Show information about your job(s) in the queue. When run without the `-u, --user=<user_list>` option, shows a list of your job(s) and all other jobs in the queue.
 ```
 squeue -u <user_id>
-```
-
-[**---work in progress---**]
-
-Delete every output file (careful):
-```
-rm *.out
 ```
 
 ## License
