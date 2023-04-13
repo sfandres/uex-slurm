@@ -42,7 +42,8 @@ int main(int argc, char *argv[]) {
             if (num_threads > omp_get_max_threads()) {
                 num_threads = omp_get_max_threads();
                 std::cout << "The number of threads provided is higher than the maximum available." << std::endl;
-                std::cout << "Number of threads set to the maximum available." << std::endl;                
+                std::cout << "Number of threads set to the maximum available: " << omp_get_max_threads() << "." << std::endl;
+                std::cout << std::endl;                
             }
         } catch (std::exception const &e) {
             std::cerr << "Error: Invalid argument. Number of threads must be an integer.\n";
