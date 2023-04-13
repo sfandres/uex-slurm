@@ -31,7 +31,7 @@ Not necessary.
 
 ### Usage
 
-The files with extension `.out` are not tracked. The use case is the fibonacci calculation given a maximum value.
+The files with extension `.out` are not tracked. The use case is the fibonacci calculation given a maximum value in Python for the first two examples, and measuring the speedup achieved in computing the mean value given a dataset and different number of threads in C++ for the third example.
 
 #### [CD22_23-P06_srun](CD22_23-P06_srun)
 
@@ -55,17 +55,20 @@ optional arguments:
 
 #### [CD22_23-P07_sbatch](CD22_23-P07_sbatch)
 
-[**---work in progress---**]
-
-Slurm array jobs make it easy to run many similar tasks. You just have to run the following command in the terminal:
+To launch a single job with sbatch, run the following command:
 ```
-sbatch --array=0-2:1 launch_job_arrays.sh
+sbatch 01_launch_sbatch_job.sh
+```
+
+To run many similar tasks, it is better to use Slurm array jobs. You just have to run the following command in the terminal:
+```
+sbatch --array=0-2:1 <launch_script>.sh
 ```
 This command will submit and add the job to the Slurm queue. I have included the `--array` option but the procedure is the same for any other option.
 
 In this particular example, the array option is already included inside the bash file, so we only need:
 ```
-sbatch launch_job_arrays.sh
+sbatch 02_launch_sbatch_job_arrays.sh
 ```
 
 #### [CD22_23-P08](CD22_23-P08)
