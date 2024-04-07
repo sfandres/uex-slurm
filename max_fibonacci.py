@@ -4,14 +4,15 @@
 """
 Script that computes the highest Fibonacci number up to a given number.
 
-Usage: max_fibonacci.py [-h] [--maximum MAXIMUM]
+Usage: max_fibonacci.py [-h] maximum
 
 Script that computes the highest Fibonacci number up to a given number.
 
+positional arguments:
+  maximum     input number to compute Fibonacci (>0).
+
 optional arguments:
-  -h, --help            show this help message and exit
-  --maximum MAXIMUM, -m MAXIMUM
-                        input number to compute Fibonacci (>0).
+  -h, --help  show this help message and exit
 
 Author: Andres J. Sanchez-Fernandez
 Email: sfandres@unex.es
