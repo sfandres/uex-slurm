@@ -8,7 +8,7 @@
 -->
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-# uex-slurm
+# UEx-Slurm
 This repository has been created for the Slurm lab session of the Distributed Computing subject at the University of Extremadura (UEx).
 
 ## Table of contents
