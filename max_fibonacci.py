@@ -1,52 +1,76 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Script that computes the highest Fibonacci number up to a given number.
+
+Usage: max_fibonacci.py [-h] [--maximum MAXIMUM]
+
+Script that computes the highest Fibonacci number up to a given number.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --maximum MAXIMUM, -m MAXIMUM
+                        input number to compute Fibonacci (>0).
+
+Author: Andres J. Sanchez-Fernandez
+Email: sfandres@unex.es
+Date: 2024-04-07
+Version: v1
+"""
+
+
 import sys
 import argparse
 
 
-def get_args(argv=None):
-    """Takes the command line arguments."""
+def get_args() -> argparse.Namespace:
+    """
+    Parse and retrieve command-line arguments.
 
-    # Get arguments.
-    parser = argparse.ArgumentParser(
-        description="Python script to play with slurm."
+    Returns:
+        An 'argparse.Namespace' object containing the parsed arguments.
+    """
+    parser = argparse.ArgumentParser(                                                   # Parser creation and description.
+        description='Script that computes the highest ' \
+                    'Fibonacci number up to a given number.'
     )
 
-    # Optional arguments.
-    parser.add_argument(
+    parser.add_argument(                                                                # Options.
         '--maximum',
         '-m',
         type=int,
-	default=1000,
+        default=1000,
         help=('input number to compute Fibonacci (>0).')
     )
 
     return parser.parse_args(sys.argv[1:])
 
-def main():
-    """Main function."""
 
-    # Get command terminal arguments.
-    args = get_args(argv=sys.argv)
+def main(args: argparse.Namespace) -> bool:
+    """
+    Main function.
 
-    # Get input number.
-    maximum = args.maximum
+    Args:
+        args: An 'argparse.Namespace' object containing the parsed arguments.
 
-    # Handle exceptions.
-    if maximum <= 0:
-        raise argparse.ArgumentError(None, 'The number must be greater than 0.')
+    Returns:
+        A boolean indicating the success of the process.
+    """
+    if args.maximum <= 0:
+        raise argparse.ArgumentError(None, 'The number must be greater than 0.')        # Raise an error if the number is not valid.
 
-    # Compute.
-    print('\nCalculating...')
-    n1, n2 = 1, 1
-    while n2 <= maximum:
+    n1, n2 = 1, 1                                                                       # Initialize the first two Fibonacci numbers.
+
+    print('\nCalculating...')                                                           # Calculate the Fibonacci numbers.
+    while n2 <= args.maximum:
         n1, n2 = n2, n1 + n2
     print('Completed!')
-
-    # Show result.
-    print(f'\nGreatest Fibonacci number up to {maximum}: {n1}')
+    print(f'\nThe highest Fibonacci number up to {args.maximum} is {n1}')               # Print the result.
 
     return 0
 
 
-# Call the main function to execute the program.
 if __name__ == '__main__':
-    sys.exit(main())
+    args = get_args()                                                                   # Parse and retrieve command-line arguments.
+    sys.exit(main(args))                                                                # Execute the main function.
