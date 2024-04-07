@@ -36,13 +36,8 @@ def get_args() -> argparse.Namespace:
                     'Fibonacci number up to a given number.'
     )
 
-    parser.add_argument(                                                                # Options.
-        '--maximum',
-        '-m',
-        type=int,
-        default=1000,
-        help=('input number to compute Fibonacci (>0).')
-    )
+    parser.add_argument('maximum', type=int,                                            # Positional arguments.
+                        help=('input number to compute Fibonacci (>0).'))
 
     return parser.parse_args(sys.argv[1:])
 
