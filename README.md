@@ -33,9 +33,9 @@ Not necessary.
 
 The files with extension `.out` are not tracked. The use case is the fibonacci calculation given a maximum value in Python for the first two examples, and measuring the speedup achieved in computing the mean value given a dataset and different number of threads in C++ for the third example.
 
-#### [CD22_23-P06_srun](CD22_23-P06_srun)
+#### [P06_srun](P06_srun)
 
-To execute this example, you can run any of the following commands (which are saved inside the [launch_srun_job.sh](CD22_23-P06_srun/launch_srun_job.sh) file) on a Slurm-managed cluster.
+To execute this example, you can run any of the following commands (which are saved inside the [launch_srun_job.sh](P06_srun/launch_srun_job.sh) file) on a Slurm-managed cluster.
 
 ```
 srun -p cpu12c -N 1 -n 1 -J max_fibonacci -t 00:10:00  python3 ../max_fibonacci.py
@@ -53,7 +53,7 @@ optional arguments:
                         input number to compute Fibonacci (>0).
 ```
 
-#### [CD22_23-P07_sbatch](CD22_23-P07_sbatch)
+#### [P07_sbatch](P07_sbatch)
 
 To launch a single job with sbatch for the fibonacci computation, run the following command:
 ```
@@ -71,7 +71,7 @@ In this particular example, the array option is already included inside the bash
 sbatch 02_launch_sbatch_job_arrays.sh
 ```
 
-#### [CD22_23-P08_speedup](CD22_23-P08_speedup)
+#### [P08_speedup](P08_speedup)
 
 Run the following command to execute the example:
 ```
@@ -81,9 +81,9 @@ where `<num_threads>` is the desired number of threads that will be used for the
 
 ## Code examples
 The examples are organized in folders:
-* [CD22_23-P06_srun](CD22_23-P06_srun) contains a simple example of how to submit a single job to Slurm using `srun` with a Python script. 
-* [CD22_23-P07_sbatch](CD22_23-P07_sbatch) contains a more complex example where `sbatch` is used to submit a single job first, followed by job arrays, where the script is also written in Python.
-* [CD22_23-P08_speedup](CD22_23-P08_speedup) contains an example to measure speedups where the aim is to compute the mean value given a dataset of N rows and M features. The sbatch file executes the compilation process as well as the execution of the algorithm. The scripts are written in C++ for timing purposes.
+* [P06_srun](P06_srun) contains a simple example of how to submit a single job to Slurm using `srun` with a Python script. 
+* [P07_sbatch](P07_sbatch) contains a more complex example where `sbatch` is used to submit a single job first, followed by job arrays, where the script is also written in Python.
+* [P08_speedup](P08_speedup) contains an example to measure speedups where the aim is to compute the mean value given a dataset of N rows and M features. The sbatch file executes the compilation process as well as the execution of the algorithm. The scripts are written in C++ for timing purposes.
 
 ## Useful terminal commands
 Show information about your job(s) in the queue. When run without the `-u, --user=<user_list>` option, shows a list of your job(s) and all other jobs in the queue.
